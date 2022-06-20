@@ -55,7 +55,8 @@ public class ChatWebSocket extends TextWebSocketHandler{
 			System.out.println("sessionList.get(i).getId() : " + sessionList.get(i).getId());
 			System.out.println("session.getId() : " + session.getId());
 			System.out.println("====================");
-			String conUserId = loginCheck(sessionList.get(i).getAttributes(), session);
+			String conUserId = loginCheck(sessionList.get(i).getAttributes(), sessionList.get(i));
+			System.out.println("conUserId : " + conUserId);
 			userList += conUserId + "++";
 		}
 		System.out.println("userList : " + userList);
